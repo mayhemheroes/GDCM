@@ -1,0 +1,7 @@
+project: gdcm
+target: gdcm
+
+cmds:
+  - cmd: /repo/build/bin/gdcmpap3 @@ out.dcm
+    env:
+      DISABLE_SMOKETEST: '1'
