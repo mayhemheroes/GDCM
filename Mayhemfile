@@ -1,5 +1,5 @@
 project: gdcm
-target: gdcm
+target: gdcmpap3
 
 cmds:
   - cmd: /repo/build/bin/gdcmpap3 @@ out.dcm
