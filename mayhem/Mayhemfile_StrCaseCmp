@@ -1,0 +1,5 @@
+project: gdcm
+target: strcasecmp
+
+cmds:
+  - cmd: /fuzz_StrCaseCmp
