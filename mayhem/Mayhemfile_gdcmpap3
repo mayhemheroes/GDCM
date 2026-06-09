@@ -1,0 +1,13 @@
+project: gdcm
+target: gdcmpap3
+
+# PAPYRUS 3.0 is a strongly-structured binary format; random bytes are rejected
+# before any DICOM parsing occurs. This seed provides a minimal valid PAPYRUS 3.0
+# DICOM file (preamble + DICM magic + FMI + private creator + Image Sequence SQ)
+# so the fuzzer can reach real parsing code and accumulate edges.
+testsuite: mayhem/testsuite/gdcmpap3/  # mayhem-lint: keep-testsuite
+
+cmds:
+  - cmd: /mayhem/install/bin/gdcmpap3 @@ /tmp/out.dcm
+    env:
+      DISABLE_SMOKETEST: '1'

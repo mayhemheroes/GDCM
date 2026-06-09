@@ -1,0 +1,6 @@
+project: gdcm
+target: strcasecmp
+
+cmds:
+  - cmd: /mayhem/fuzz_StrCaseCmp
+    libfuzzer: true
