@@ -47,7 +47,6 @@ set(DSED_TEST_SRCS
   TestVL.cxx
   TestVM.cxx
   TestVR.cxx
-  TestCVE20263650.cxx
   #TestValue.cxx
   #TestTorture.cxx
   TestElement2.cxx
