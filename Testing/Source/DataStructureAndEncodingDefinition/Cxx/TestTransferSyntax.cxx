@@ -46,6 +46,7 @@ static const int losslylosslessarray[][3] = {
     { 0, 1, 1 }, //    HTJ2KLossless
     { 0, 1, 1 }, //    HTJ2KRPCLLossless
     { 1, 0, 1 }, //    HTJ2K
+    { 0, 1, 0 }, //    DeflatedImageFrameCompression
 };
 
 static int TestTransferSyntaxAll()
