@@ -868,12 +868,6 @@ bool RLECodec::DecodeByStreams(std::istream &is, std::ostream &os)
     {
     unsigned long numberOfReadBytes = 0;
     std::streampos pos = is.tellg() - start;
-    if (frame.Header.GetOffset(i) > BufferLength) 
-      {
-        gdcmErrorMacro("Offset is bigger then buffer Length");
-        return false;
-      }
-
     if ( frame.Header.GetOffset(i) - pos != 0 )
       {
       // ACUSON-24-YBR_FULL-RLE.dcm
