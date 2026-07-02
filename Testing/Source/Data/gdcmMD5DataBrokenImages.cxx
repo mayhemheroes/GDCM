@@ -69,7 +69,7 @@ static const char * const gdcmMD5DataBrokenImages[][2] = {
 { "28f9d4114b0699630a77d027910e5e41" , "MARCONI_MxTWin-12-MONO2-JpegLossless-ZeroLengthSQ.dcm" },
 
 // serious bug from gdcm 1.2.0, where VR=UN would be written on 16bits length sigh... no toolkit will ever be able to deal with that thing (and should not anyway)
-{ "50752239f24669697897c4b6542bc161" , "SIEMENS_MAGNETOM-12-MONO2-GDCM12-VRUN.dcm" },
+{ "e363f98016fae699f8d752be6096eb45" , "SIEMENS_MAGNETOM-12-MONO2-GDCM12-VRUN.dcm" },
 
 // unordered dataset
 { "f221e76c6f0758877aa3cf13632480f4" , "dicomdir_Pms_WithVisit_WithPrivate_WithStudyComponents" }, // size match
@@ -85,7 +85,7 @@ static const char * const gdcmMD5DataBrokenImages[][2] = {
 // As a side note the FMI was set to Little Endian Implicit ...
 { "ddf83cd708e58021a633588927d55ab8" , "BugGDCM2_UndefItemWrongVL.dcm" }, // size mismatch
 
-{ "cb43a6ad60b8eacf718687b82126f625" , "NM_Kakadu44_SOTmarkerincons.dcm" }, // item size mismatch
+{ "6d49d6b2fb3bc2505c51bb86b04b92b9" , "NM_Kakadu44_SOTmarkerincons.dcm" }, // item size mismatch
 
 // Item length are bogus (explicit length)
 { "1225ea0a03b93393f70c73be35e2619d" , "PhilipsInteraSeqTermInvLen.dcm" },
@@ -95,6 +95,26 @@ static const char * const gdcmMD5DataBrokenImages[][2] = {
 
 // VR is set to 'OX'
 { "5793021ffb7b3506ae22ae9329d67d29" , "Bug_Siemens_PrivateIconNoItem.dcm" },
+// VR is 'OW' for encapsulated, should be OB
+{ "e1f57a4e3747342eb3a39a6b06f4394c" , "MAROTECH_CT_JP2Lossy.dcm" },
+{ "0104ab38d1ab04c273cf263ab7c164c4" , "RadBWLossLess.dcm" },
+{ "879e975e56a14ce019e495289311fb89" , "PHILIPS_Gyroscan-12-MONO2-Jpeg_Lossless.dcm" },
+{ "16e226e33985c7873063e5694c528488" , "OsirixFake16BitsStoredFakeSpacing.dcm" },
+{ "11772aa40cf6ef0ff0aed75bf545ddaf" , "LEADTOOLS_FLOWERS-8-PAL-RLE.dcm" },
+{ "50a1d3ababd82072a0fac0c16bad27d2" , "LEADTOOLS_FLOWERS-8-MONO2-RLE.dcm" },
+{ "01503680f31337682d6a791562625d51" , "LEADTOOLS_FLOWERS-8-MONO2-JpegLossy.dcm" },
+{ "33eba2b46adef5abd80912224ba8d2f5" , "LEADTOOLS_FLOWERS-24-RGB-JpegLossy.dcm" },
+{ "fd57b8e2d7f3a8ebeae592968bbf1e7d" , "LEADTOOLS_FLOWERS-24-RGB-JpegLossless.dcm" },
+{ "85d61764c461c3770ad5a41558409ad2" , "LEADTOOLS_FLOWERS-16-MONO2-RLE.dcm" },
+{ "b4f0a69de85e4d0101468b0a199e1702" , "LEADTOOLS_FLOWERS-16-MONO2-JpegLossless.dcm" },
+{ "050405251ba4c6c1e448dfeb9da03e81" , "GE_DLX-8-MONO2-Multiframe-Jpeg_Lossless.dcm" },
+// Group Length as UN instead of UL
+{ "0c7f6be19ecf5512af0846f75882dae7" , "fffc0000UN.dcm" },
+{ "7b192efdc47e1b3ba07585bc9253cfb0" , "SIEMENS_MAGNETOM-12-MONO2-VRUN.dcm" },
+// Private creators as UN instead of LO
+{ "c36c540be5f577f653f451f298cfbdfa" , "PET-GE-dicomwrite-PixelDataSQUNv2.dcm" },
+{ "566569b42afa05c010f970dea8097ba0" , "MEDILABInvalidCP246_EVRLESQasUN.dcm" },
+
 
 { nullptr ,nullptr }
 };
