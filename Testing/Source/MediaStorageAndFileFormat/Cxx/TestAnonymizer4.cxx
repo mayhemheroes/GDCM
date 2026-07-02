@@ -73,13 +73,22 @@ static int TestAnonymize(const char *subdir, const char* filename)
   const DataSet & ds = reader.GetFile().GetDataSet();
   //std::cout << ds << std::endl;
 
-  const ByteValue *bv = ds.GetDataElement( ptag2 ).GetByteValue();
+  const bool present = ds.FindDataElement( ptag2 );
+  if( present )
+    {
+    std::cerr << "ByteValue present" << std::endl;
+    return 1;
+    }
+ 
+  const ByteValue *bv = ds.GetDataElement( ptag3 ).GetByteValue();
   if( !bv )
     {
+    std::cerr << "ByteValue missing" << std::endl;
     return 1;
     }
   if( bv->GetLength() != 0 )
     {
+    std::cerr << "Length should be 0" << std::endl;
     return 1;
     }
 
